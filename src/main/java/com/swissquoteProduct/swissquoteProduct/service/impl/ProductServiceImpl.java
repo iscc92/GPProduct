@@ -41,11 +41,6 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public Product findProductByValue(Integer value) {
-		return this.productRepository.findByValue(value);
-	}
-
-	@Override
 	public Product deleteProduct(String name) {
 		this.productRepository.deleteByName(name);
 		return null;

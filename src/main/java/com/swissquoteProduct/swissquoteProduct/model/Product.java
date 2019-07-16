@@ -1,5 +1,7 @@
 package com.swissquoteProduct.swissquoteProduct.model;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,13 +15,6 @@ import lombok.Data;
 @Data
 
 public class Product {
-	
-	Product() {}
-	
-	public Product(String name, String description, Integer value) {
-		this.name = name;
-		this.description = description;
-	}
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -27,5 +22,15 @@ public class Product {
 	
 	private String description;
 	
-	private Integer value;
+	private BigDecimal value;
+	
+	public Product() {}
+	
+	public Product(String name, String description, BigDecimal value) {
+		this.name = name;
+		this.description = description;
+		this.value = value;
+	}
+
+
 }

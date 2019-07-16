@@ -22,11 +22,6 @@ public class ProductController {
 		return this.productService.findProduct(name);
 	}
 	
-	@RequestMapping(value = "/product/value/{value}", method = RequestMethod.GET)
-	public Product findProductByValue(@PathVariable Integer value) {
-		return this.productService.findProductByValue(value);
-	}	
-	
 	@RequestMapping(value = "/product", method = RequestMethod.POST)
 	public Product saveProduct(@RequestBody ProductRequest productRequest) {
 		Product product = new Product(productRequest.getName(), productRequest.getDescription(), productRequest.getValue());

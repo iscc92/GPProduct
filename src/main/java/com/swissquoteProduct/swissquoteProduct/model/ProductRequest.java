@@ -1,5 +1,7 @@
 package com.swissquoteProduct.swissquoteProduct.model;
 
+import java.math.BigDecimal;
+
 import lombok.Data;
 
 @Data
@@ -9,6 +11,6 @@ public class ProductRequest {
 	
 	private String description;
 	
-	private Integer value;
+	private BigDecimal value;
 	
 }
